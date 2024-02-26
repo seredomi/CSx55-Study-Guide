@@ -41,3 +41,26 @@
 | Consider an unsynchronized method that does not include invocations to other methods. Invocations of this method will entail lock acquisition of the encapsulating object. | False |
 | Invocation of (non-static) synchronized methods on an object involves acquisition of the implicit lock associated with that object. | True |
 Two or more synchronized methods of the same object can never run in parallel in separate threads. | True | 
+
+## Week 3 (Thread Safety)
+| Question | Answer |
+| --- | --- |
+| Synchronizing all public methods of all classes within a program will guarantee thread-safety. | False |
+| Consider an instance a1 of Class A.  Class A has two synchronized methods m1() and m2().   Method m1() includes an invocation to method m2().  Any thread that invokes a1.m1() will deadlock. | False |
+| We only need to synchronize accesses to write operations on a variable.  The read operations need not be synchronized. | False |
+| Consider a variable count of type long.   If the mutation operation on this variable is the increment operator (++)  there is no need to synchronize accesses to the mutation operation. | False |
+| Stateless objects are always thread-safe. | True |
+| The transient keyword plays a role in thread-synchronization by ensuring that all accesses to that variable will be redirected to main memory. | False |
+| The key to thread-safe programming is not so much what the object does, but rather how it will be accessed. | True |
+| The wait()/notify() mechanism in Java has an inherent race condition that cannot be solved without deep integration with the JVM. | True |
+| Storing state variables of a particular class in public fields allows other classes within that program to reason about thread-safety. | False |
+| Consider a program that has a mix of serial and parallel components. If the serial component accounts for 25% of the execution time, the maximum speed up that we can ever hope to achieve is 4. | True |
+| Latency and throughputs may at times be at odds with each other. | True |
+| Synchronizers encapsulate state that determines whether threads arriving at the synchronizer should be allowed to pass or wait.  However, they do support manipulation of this state.  | False |
+|  A weakly consistent iterator may throw the ConcurrentModificiationException. | False |
+| Consider a data structure such as the ConcurrentHashMap that relies on lock striping. Acquisition of the implicit lock associated with the object representing the data structure, will not result in acquisition of all locks that are part of stripe set. | True |
+| In synchronized collections, such as the Hashtable, multiple threads may concurrently be active within the data structure at the same time. | False |
+| Latches wait for other threads, while barriers wait for events. | False |
+| Consider the case where you are using the semaphore synchronizer to implement resource pools.  You can skip the acquisition phase, and access the resource directly without violating correctness requirements.  | False |
+| Consider the case where you are using the semaphore synchronizer to implement resource pools. If you perform an acquire as opposed to a release when you are done using the resource, eventually you will have liveness issues with resource pool becoming unavailable. | True |
+| Consider the case where you are using the semaphore synchronizer to implement resource pools. The semaphore must be initialized to twice the number of available resources. | False |
