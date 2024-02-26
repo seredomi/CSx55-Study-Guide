@@ -64,3 +64,19 @@ Two or more synchronized methods of the same object can never run in parallel in
 | Consider the case where you are using the semaphore synchronizer to implement resource pools.  You can skip the acquisition phase, and access the resource directly without violating correctness requirements.  | False |
 | Consider the case where you are using the semaphore synchronizer to implement resource pools. If you perform an acquire as opposed to a release when you are done using the resource, eventually you will have liveness issues with resource pool becoming unavailable. | True |
 | Consider the case where you are using the semaphore synchronizer to implement resource pools. The semaphore must be initialized to twice the number of available resources. | False |
+
+## Week 4 ()
+| Question | Answer |
+| --- | --- |
+| A regular graph is one in which the n nodes are organized in a ring, with each node directly connected to its nearest k neighbors. In random graphs on the other hand, the vertices are connected to each other at random. Pathlength refers to the average number of hops needed to reach any node from any other node in the graph. The clustering coefficient is the measure of the level of clustering between the neighboring nodes for any vertex-node in the system. Indicate [High/Low] for the questions below. Random graph: Average pathlength | High |
+| A regular graph is one in which the n nodes are organized in a ring, with each node directly connected to its nearest k neighbors. In random graphs on the other hand, the vertices are connected to each other at random. Pathlength refers to the average number of hops needed to reach any node from any other node in the graph. The clustering coefficient is the measure of the level of clustering between the neighboring nodes for any vertex-node in the system. Indicate [High/Low] for the questions below. Random graph: Clustering Coefficients | Low |
+| A regular graph is one in which the n nodes are organized in a ring, with each node directly connected to its nearest k neighbors. In random graphs on the other hand, the vertices are connected to each other at random. Pathlength refers to the average number of hops needed to reach any node from any other node in the graph. The clustering coefficient is the measure of the level of clustering between the neighboring nodes for any vertex-node in the system. Indicate [High/Low] for the question below. Regular graph: Average pathlength | Low |
+| A regular graph is one in which the n nodes are organized in a ring, with each node directly connected to its nearest k neighbors. In random graphs on the other hand, the vertices are connected to each other at random. Pathlength refers to the average number of hops needed to reach any node from any other node in the graph. The clustering coefficient is the measure of the level of clustering between the neighboring nodes for any vertex-node in the system. Indicate [High/Low] for the question below. Regular graph: Clustering Coefficients | High |
+| A simple rule to create power-law networks is to ensure that new nodes attach preferentially to nodes with a high degree of connections to other nodes in the system. | True |
+| Hubs can emerge in small-world networks. | False |
+| An advantage of using a thread per connection is that the server benefits from lower thread management overheads compared to thread-per-request. | True |
+| An advantage of using thread per request is that throughput is potentially maximized. | True |
+| One advantage of a worker pool is that the number of worker threads is fixed, so, the number of threads may be too few to adequately cope with the rate of requests. Additionally, one disadvantage of a worker pool is that you need to account for coordinated accesses to the shared queue. | False |
+| An advantage of a worker pool is that thread context switching is minimized. | True |
+
+## Week 5 
