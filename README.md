@@ -102,3 +102,20 @@ Two or more synchronized methods of the same object can never run in parallel in
 | In Chord, a peer X may occupy multiple entries in the finger-table maintained at node Y. | True |
 | Consider a Chord system with an ID space that encompasses 0 through 2128-1. How many entries are stored in the Finger Table at each peer? | 128 |
 | Consider a P2P system where the peers have 160-bit IDs but the content identifiers are generated using MD5 (128-bits).  In this system: (1) there are thousands of peers who IDs are randomly generated using the SHA-1 cryptographic hash function, and (2) billions of data items that need to be stored. Once the storage operations have been completed, most of the peers will have no (or very few) stored elements. | True |
+
+
+Week 6 
+| Question | Answer |
+| --- | --- |
+| In this question you are required to contrast a well-populated PASTRY and Chord system. Peers and contents in both these systems are based on a 128-bit GUID.  You are required to consider the basic scheme without having to deal with refinements such as diversity of routing paths, redundancies, etc. How many rows are there in the routing table (or finger table) at a Chord peer in this system? | 128 |
+| Which of these 2 refinements are suitable for search in unstructured peer to peer systems. | replication |
+| Which of these 2 refinements are suitable for search in structured peer to peer systems. | random walks |
+| Which of these 2 refinements are suitable for search in structured peer to peer systems. | gossiping |
+| Which of these 2 refinements are suitable for search in unstructured peer to peer systems. | expanded ring search |
+| A A multicast group can be constructed using just the class D address. | False |
+| It may be possible for the average pathlengths (representing the number of logical hops) for communications between two nodes to be lower in hybrid P2P systems than in DHT based P2P systems. An ultra-peer network as in Gnutella, results in a power law network. Here, the average pathlengths for communications becomes log log N, which is much better than the log N that is possible in DHT-based systems.  | True |
+| One disadvantage of an unstructured P2P system is that it is probabilistic, meaning that it can't offer absolute guarantees on locating objects. | True |
+| One advantage of an unstructured P2P system is that it is self-organizing and naturally resilient to failures. | True |
+| One advantage of a structured P2P system is that it maintains complex structures that are difficult and costly to maintain in dynamic settings. | False |
+| One advantage of a structured P2P system is that it is guaranteed to locate objects with bounds on this operation. | True |
+In this question you are required to contrast a well-populated PASTRY and Chord system. Peers and contents in both these systems are based on a 128-bit GUID.  You are required to consider the basic scheme without having to deal with refinements such as diversity of routing paths, redundancies, etc. How many rows are there in the routing table (or finger table) at a Chord peer in this system? | 128 |
