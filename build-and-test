@@ -1,0 +1,1 @@
+g++ -Wall ParseAndUpdate.cc -o run.o && ./run.o quiz-results.txt quiz-results.txt
