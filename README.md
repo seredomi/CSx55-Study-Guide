@@ -104,7 +104,7 @@ Two or more synchronized methods of the same object can never run in parallel in
 | Consider a P2P system where the peers have 160-bit IDs but the content identifiers are generated using MD5 (128-bits).  In this system: (1) there are thousands of peers who IDs are randomly generated using the SHA-1 cryptographic hash function, and (2) billions of data items that need to be stored. Once the storage operations have been completed, most of the peers will have no (or very few) stored elements. | True |
 
 
-Week 6 
+## Week 6
 | Question | Answer |
 | --- | --- |
 | In this question you are required to contrast a well-populated PASTRY and Chord system. Peers and contents in both these systems are based on a 128-bit GUID.  You are required to consider the basic scheme without having to deal with refinements such as diversity of routing paths, redundancies, etc. How many rows are there in the routing table (or finger table) at a Chord peer in this system? | 128 |
