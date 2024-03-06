@@ -35,15 +35,16 @@ vector<array<string, 2>> parseQuizResults(string filename) {
       // get question
       getline(file, line);
       string question = line;
+      // cout << "question: " << question << "\n";
 
       // skip until "Correct Answer:"
       while (getline(file, line))
         if (line.find("Correct Answer:") != string::npos) {
-          getline(file, line);
           break;
         }
 
       // get answer by splicing after "Correct Answer:"
+      cout << "correct answer line: " << line << "\n";
       string answer = line.substr(16);
 
       // add question and answer to results
