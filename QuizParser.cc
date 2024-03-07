@@ -61,7 +61,7 @@ vector<array<string, 2>> parseQuizResults(string filename) {
 void vectorToCSV(vector<array<string, 2>> results, string filename) {
   ofstream file(filename);
   for (auto result : results) {
-    file << result[0] << "," << result[1] << "\n";
+    file << result[0] << "\t" << result[1] << "\n";
   }
   file.close();
 }
