@@ -35,17 +35,18 @@ vector<array<string, 2>> parseQuizResults(string filename) {
       // get question
       getline(file, line);
       string question = line;
-      cout << "QUESTION: " << question << "\n";
 
       // skip until "Correct Answer:"
       while (getline(file, line))
-        if (line.find("Correct Answer:") < line.size() && line.size() != 0) {
+        if (line.find("Correct ") < line.size() && line.size() != 0) {
+          while (line.size() == 0 || line.size() == 15)  {
+            getline(file, line);
+          }
           break;
         }
 
       // get answer by splicing after "Correct Answer:"
-      string answer = line.substr(15);
-      cout << "ANSWER: " << answer << "\n\n";
+      string answer = line.size() < 15 ? line : line.substr(15);
 
       // add question and answer to results
       results.push_back({question, answer});
