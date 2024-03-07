@@ -27,7 +27,7 @@ vector<array<string, 2>> parseQuizResults(string filename) {
 
       // skip until after " point"
       while (getline(file, line))
-        if (line.find(" point") != string::npos) {
+        if (line.find(" point") < line.size() && line.size() != 0) {
           getline(file, line);
           break;
         }
@@ -35,17 +35,17 @@ vector<array<string, 2>> parseQuizResults(string filename) {
       // get question
       getline(file, line);
       string question = line;
-      // cout << "question: " << question << "\n";
+      cout << "QUESTION: " << question << "\n";
 
       // skip until "Correct Answer:"
       while (getline(file, line))
-        if (line.find("Correct Answer:") != string::npos) {
+        if (line.find("Correct Answer:") < line.size() && line.size() != 0) {
           break;
         }
 
       // get answer by splicing after "Correct Answer:"
-      cout << "correct answer line: " << line << "\n";
-      string answer = line.substr(16);
+      string answer = line.substr(15);
+      cout << "ANSWER: " << answer << "\n\n";
 
       // add question and answer to results
       results.push_back({question, answer});
@@ -71,7 +71,7 @@ int main(int argc, char **argv) {
 
   // print results
   for (auto result : results) {
-    cout << "QUESTION: " << result[0] << "\nANSWER: " << result[1] << "\n\n";
+    cout << "QUESTION:\n" << result[0] << "\nANSWER:\n" << result[1] << "\n\n";
   }
 
 }
