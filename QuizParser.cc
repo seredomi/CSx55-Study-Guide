@@ -29,7 +29,7 @@ vector<array<string, 2>> parseQuizResults(string filename) {
       // skip until after " point"
       while (getline(file, line))
         if (line.find(" point") < line.size() && line.size() != 0) {
-          getline(file, line);
+          while (line.size() == 0) getline(file, line);
           break;
         }
 
