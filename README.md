@@ -87,7 +87,7 @@ Two or more synchronized methods of the same object can never run in parallel in
 | In P2P systems, it is costly and cumbersome to replicate routes and object references n-fold. | False |
 | Unlike network routers, routing tables in P2P overlays are updated in seconds. | True |
 | In P2P systems, each node may differ in the quality of the resource that they contribute.  This also implies that every node will have different functional capabilities and responsibilities. | False |
-| Data discovery by flooding the P2P system is guaranteed to succeed. | False |
+| Data discovery by flooding the P2P system is guaranteed to succeed. | True |
 | Cryptographic hash functions are used to generate GUIDs in P2P systems because of the distribution/dispersion of values they generate (load balancing) and their one-way property (it is computationally infeasible to derive the original content from the hash). | True |
 | In P2P systems, nodes can be assigned identifiers from a different ID space than what is used for data items without impacting system performance. For example, the peer identifiers can be based on 160-bit identifiers while the data item identifiers can be based on 128-bit identifiers. | False |
 | In P2P systems newly available peers are incrementally assimilated i.e. it's not the case that all new data traffic is redirected to the newly available peer till such time that another new peer is available.  | True |
