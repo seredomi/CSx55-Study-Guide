@@ -5,6 +5,7 @@
 # include <vector>
 # include <sstream>
 # include <algorithm>
+# include <array>
 
 using namespace std;
 
@@ -80,10 +81,12 @@ int main(int argc, char **argv) {
   vector<array<string, 2>> results = parseQuizResults(quizFile);
 
   // print results
-  for (auto result : results) {
-    cout << "QUESTION:\n" << result[0] << "\nANSWER:\n" << result[1] << "\n\n";
-  }
+  // for (auto result : results) {
+  //   cout << "QUESTION:\n" << result[0] << "\nANSWER:\n" << result[1] << "\n\n";
+  // }
 
-  vectorToCSV(results, "resultsFile.csv");
+  string resultFilename = quizFile.substr(0, quizFile.size() - 4) + "-results.csv";
+  cout << "printing to " << resultFilename << "\n";
+  vectorToCSV(results, resultFilename);
 
 }
