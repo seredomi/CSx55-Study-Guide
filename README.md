@@ -1,7 +1,7 @@
 # CS455 Quiz Study Guide
 
 ## Week 1 (Threads, Processes, and Synchronization)
-<details open><summary>
+<details><summary>
   
   | Quiz 01  <sup><sub><i>[Click to Toggle View]</i></sub></sup> |
   | --- |
@@ -26,7 +26,7 @@
 
 </details>
 
-<details open><summary>
+<details><summary>
   
   | Quiz 02  <sup><sub><i>[Click to Toggle View]</i></sub></sup> |
   | --- |
@@ -52,7 +52,7 @@
 ---
 
 ## Week 2 (Locks, Synchronization)
-<details open><summary>
+<details><summary>
   
   | Quiz 03  <sup><sub><i>[Click to Toggle View]</i></sub></sup> |
   | --- |
@@ -77,7 +77,7 @@
 ---
 
 ## Week 3 (Thread Safety, Synchronization)
-<details open><summary>
+<details><summary>
   
   | Quiz 04  <sup><sub><i>[Click to Toggle View]</i></sub></sup> |
   | --- |
@@ -99,7 +99,7 @@
 
 </details>
 
-<details open><summary>
+<details><summary>
   
   | Quiz 05  <sup><sub><i>[Click to Toggle View]</i></sub></sup> |
   | --- |
@@ -124,7 +124,7 @@
 ---
 
 ## Week 4 (Networks)
-<details open><summary>
+<details><summary>
   
   | Quiz 06  <sup><sub><i>[Click to Toggle View]</i></sub></sup> |
   | --- |
@@ -149,7 +149,7 @@
 ---
 
 ## Week 5 (P2P, Pastry, Chord)
-<details open><summary>
+<details><summary>
   
   | Quiz 07  <sup><sub><i>[Click to Toggle View]</i></sub></sup> |
   | --- |
@@ -171,7 +171,7 @@
 
 </details>
 
-<details open><summary>
+<details><summary>
   
   | Quiz 08  <sup><sub><i>[Click to Toggle View]</i></sub></sup> |
   | --- |
@@ -196,7 +196,7 @@
 ---
 
 ## Week 6 (Continued - P2P, Pastry, Chord)
-<details open><summary>
+<details><summary>
   
   | Quiz 09  <sup><sub><i>[Click to Toggle View]</i></sub></sup> |
   | --- |
@@ -223,7 +223,7 @@
 ---
 
 ## Week 9 (MapReduce)
-<details open><summary>
+<details><summary>
   
   | Quiz 10  <sup><sub><i>[Click to Toggle View]</i></sub></sup> |
   | --- |
@@ -243,5 +243,30 @@
 | 9 | Consider a particular reducer `RX` that has received 1000 intermediate outputs from mappers; these intermediate outputs correspond to 100 unique keys.<br><br>(T/F) The intermediate keys are sorted but not grouped (by key) before invoking the reduce function. | False |
 | 10 | Consider a particular reducer `RX` that has received 1000 intermediate outputs from mappers; these intermediate outputs correspond to 100 unique keys.<br><br>(T/F) The keys are grouped (by key), but not sorted before invoking the reduce function. | False |
 | 11 | Consider a particular reducer `RX` that has received 1000 intermediate outputs from mappers; these intermediate outputs correspond to 100 unique keys.<br><br>(T/F) The reduce function of `RX` is invoked exactly 100 times. | True |
+
+</details>
+
+---
+
+## Week 10 (Hadoop)
+<details><summary>
+  
+  | Quiz 11  <sup><sub><i>[Click to Toggle View]</i></sub></sup> |
+  | --- |
+  
+</summary>
+  
+| # | Question | Answer |
+| ---: | --- | --- |
+| 1 | Consider a large file managed by HDFS with a replication level of 3.<br><br> (T/F) In HDFS, it is possible that at a particular instant, blocks comprising this file may have a replication factor of 2, 3 or 4. | True |
+| 2 | Data flow traffic in HDFS passes through the namenode. | False |
+| 3 | The size of the available main memory at a namenode can potentially impact the size and performance of the entire file system. | True |
+| 4 | In HDFS High Availability, individual data nodes can choose to send block reports to either one of the namenodes. | False |
+| 5 | In HDFS Federation, the block pool storage is partitioned between multiple namenodes. | False |
+| 6 | In HDFS Federation, the system name space is partitioned between multiple namenodes. | True |
+| 7 | Increasing the block size to 512 MB (for example) in HDFS can reduce the degree of concurrency in processing. | True |
+| 8 | Consider an HDFS system that stores data in 64 MB blocks (by default).<br><br>(T/F) The average space lost to internal fragmentation for a given file is 32 MB (i.e., half the block size). | False |
+| 9 | HDFS supports UNIX session semantics -- therefore, changes to a file are immediately visible. | False |
+| 10 | Consider a client that is generating data for a file to be stored in HDFS. The file is being stored with a default replication level of 3.<br><br>(T/F) The client creates a pipeline with 3 replicas of a block, and writes to ONLY the first replica within this pipeline. | True |
 
 </details>
