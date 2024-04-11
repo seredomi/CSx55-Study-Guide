@@ -270,3 +270,28 @@
 | 10 | Consider a client that is generating data for a file to be stored in HDFS. The file is being stored with a default replication level of 3.<br><br>(T/F) The client creates a pipeline with 3 replicas of a block, and writes to ONLY the first replica within this pipeline. | True |
 
 </details>
+
+---
+
+## Week 11 (Spark)
+<details><summary>
+  
+  | Quiz 12  <sup><sub><i>[Click to Toggle View]</i></sub></sup> |
+  | --- |
+  
+</summary>
+  
+| # | Question | Answer |
+| ---: | --- | --- |
+| 1 | A Spark DataFrame can span thousands of computers. | True |
+| 2 | Actions on an RDD (Resilient Distributed Dataset) do not necessarily have data locality. | True |
+| 3 | Transformation operations on RDDs can involve at most 2 RDDs. | False |
+| 4 | RDDs are recomputed (by default) every time you run an action on them. | True |
+| 5 | Once persisted, an RDD is memory resident on the machine where the driver program is executing. | False |
+| 6 | The primary objective of lazy evaluations of RDDs is to avoid repeated passes over the same underlying files. | True |
+| 7 | Spark consults the lineage graph for an RDD as part of the sequence of operations leading up to loading portions of the data in memory. | True |
+| 8 | Actions on an RDD must result in an RDD. | True |
+| 9 | RDD Transformation operators in Spark do not necessarily result in an RDD. | False |
+| 10 | Memory residency of data is one of the key enabling concepts in Spark. | True |
+
+</details>
